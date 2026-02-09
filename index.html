@@ -1,0 +1,1318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alex Bautista — Solutions Architect & Technical Lead</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ============================================
+       CV — Alex Bautista
+       Solutions Architect & Technical Lead
+       Design: Editorial / Luxury Minimal
+       ============================================ */
+
+    :root {
+      --sidebar-bg: #0f172a;
+      --sidebar-bg-end: #162036;
+      --sidebar-text: #94a3b8;
+      --sidebar-heading: #e2e8f0;
+      --accent: #b8860b;
+      --accent-soft: rgba(184, 134, 11, 0.15);
+      --accent-border: rgba(184, 134, 11, 0.35);
+      --main-bg: #ffffff;
+      --text-primary: #1e293b;
+      --text-secondary: #475569;
+      --text-muted: #94a3b8;
+      --border-light: #e2e8f0;
+      --section-bg: #f8fafc;
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Work Sans', -apple-system, sans-serif;
+    }
+
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 15px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      color: var(--text-primary);
+      background: #e2e8f0;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    /* ---- Layout ---- */
+    .cv-wrapper {
+      max-width: 1080px;
+      margin: 2rem auto;
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      background: var(--main-bg);
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
+      min-height: 100vh;
+      animation: fadeIn 0.6s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ============================================
+       SIDEBAR
+       ============================================ */
+    .sidebar {
+      background: linear-gradient(175deg, var(--sidebar-bg) 0%, var(--sidebar-bg-end) 100%);
+      color: var(--sidebar-text);
+      padding: 2.5rem 1.8rem;
+      position: relative;
+    }
+
+    .sidebar::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 3px;
+      height: 100%;
+      background: linear-gradient(to bottom, var(--accent), transparent 70%);
+    }
+
+    /* Photo */
+    .photo-container {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .photo {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #1e293b, #334155);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-serif);
+      font-size: 2.8rem;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 2px;
+      border: 3px solid rgba(184, 134, 11, 0.3);
+      overflow: hidden;
+    }
+
+    .photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Sidebar Section */
+    .sidebar-section {
+      margin-bottom: 2rem;
+    }
+
+    .sidebar-title {
+      font-family: var(--font-sans);
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid rgba(184, 134, 11, 0.2);
+    }
+
+    /* Contact */
+    .contact-item {
+      margin-bottom: 0.7rem;
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
+
+    .contact-label {
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--sidebar-heading);
+      display: block;
+      margin-bottom: 0.15rem;
+    }
+
+    .contact-item a:hover {
+      color: var(--accent);
+    }
+
+    /* Links */
+    .link-item {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-size: 0.85rem;
+      color: var(--sidebar-text);
+      transition: color 0.2s, transform 0.2s;
+    }
+
+    .link-item:hover {
+      color: var(--accent);
+      transform: translateX(3px);
+    }
+
+    .link-item .link-label {
+      font-weight: 600;
+      color: var(--sidebar-heading);
+    }
+
+    /* Skills */
+    .skill-group {
+      margin-bottom: 1.2rem;
+    }
+
+    .skill-group-title {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--sidebar-heading);
+      margin-bottom: 0.5rem;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+    }
+
+    .skill-tag {
+      font-size: 0.72rem;
+      padding: 0.2rem 0.55rem;
+      border-radius: 3px;
+      background: var(--accent-soft);
+      border: 1px solid var(--accent-border);
+      color: #cbd5e1;
+      font-weight: 400;
+      transition: background 0.2s;
+    }
+
+    .skill-tag:hover {
+      background: rgba(184, 134, 11, 0.25);
+    }
+
+    /* Languages */
+    .language-item {
+      margin-bottom: 0.5rem;
+      font-size: 0.85rem;
+    }
+
+    .language-name {
+      font-weight: 600;
+      color: var(--sidebar-heading);
+    }
+
+    .language-level {
+      font-size: 0.75rem;
+      color: var(--sidebar-text);
+    }
+
+    /* ============================================
+       MAIN CONTENT
+       ============================================ */
+    .main-content {
+      padding: 2.5rem 2.8rem;
+    }
+
+    /* Header */
+    .cv-header {
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 2px solid var(--border-light);
+      position: relative;
+    }
+
+    .cv-header::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 80px;
+      height: 2px;
+      background: var(--accent);
+    }
+
+    .cv-name {
+      font-family: var(--font-serif);
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.1;
+      letter-spacing: -0.5px;
+    }
+
+    .cv-title {
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      font-weight: 300;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-top: 0.5rem;
+    }
+
+    /* Sections */
+    .section {
+      margin-bottom: 2rem;
+    }
+
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 1.2rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border-light);
+      position: relative;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 40px;
+      height: 1px;
+      background: var(--accent);
+    }
+
+    /* Profile */
+    .profile-text {
+      font-size: 0.92rem;
+      line-height: 1.75;
+      color: var(--text-secondary);
+    }
+
+    .profile-text strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    /* Experience */
+    .experience-list {
+      position: relative;
+    }
+
+    .experience-item {
+      position: relative;
+      padding-left: 1.2rem;
+      padding-bottom: 1.5rem;
+      border-left: 1px solid var(--border-light);
+      margin-left: 4px;
+    }
+
+    .experience-item:last-child {
+      padding-bottom: 0;
+      border-left-color: transparent;
+    }
+
+    .experience-item::before {
+      content: '';
+      position: absolute;
+      left: -5px;
+      top: 5px;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--accent);
+      border: 2px solid var(--main-bg);
+      box-shadow: 0 0 0 2px var(--accent);
+    }
+
+    .experience-item.current::before {
+      background: var(--main-bg);
+      box-shadow: 0 0 0 2px var(--accent), 0 0 0 5px rgba(184, 134, 11, 0.15);
+    }
+
+    .exp-title {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--text-primary);
+      line-height: 1.3;
+    }
+
+    .exp-company {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      margin-top: 0.1rem;
+    }
+
+    .exp-company-desc {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      font-style: italic;
+      margin-top: 0.1rem;
+    }
+
+    .exp-date {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-top: 0.25rem;
+    }
+
+    .exp-description {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      margin-top: 0.4rem;
+      line-height: 1.6;
+    }
+
+    .exp-description ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .exp-description li {
+      padding-left: 1rem;
+      position: relative;
+      margin-bottom: 0.25rem;
+    }
+
+    .exp-description li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 300;
+    }
+
+    /* Client portfolio — simple links (Devir style) */
+    .exp-clients {
+      margin-top: 0.5rem;
+      padding-top: 0.5rem;
+      border-top: 1px dashed var(--border-light);
+    }
+
+    .exp-clients-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.4rem;
+    }
+
+    .client-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+    }
+
+    .client-link {
+      font-size: 0.72rem;
+      padding: 0.2rem 0.5rem;
+      border-radius: 3px;
+      background: var(--section-bg);
+      border: 1px solid var(--border-light);
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+
+    .client-link:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: rgba(184, 134, 11, 0.05);
+    }
+
+    /* Client portfolio — visual grid (Infracommerce style) */
+    .client-showcase {
+      margin-top: 0.75rem;
+      padding-top: 0.65rem;
+      border-top: 1px solid var(--border-light);
+    }
+
+    .client-showcase-label {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.6rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .client-showcase-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(to right, var(--accent), transparent);
+      opacity: 0.3;
+    }
+
+    .client-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.45rem;
+    }
+
+    .client-card {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.55rem 0.65rem;
+      border: 1px solid var(--border-light);
+      border-radius: 8px;
+      background: #fff;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .client-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 3px;
+      height: 100%;
+      background: var(--accent);
+      transform: scaleY(0);
+      transition: transform 0.25s ease;
+    }
+
+    .client-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    }
+
+    .client-card:hover::before {
+      transform: scaleY(1);
+    }
+
+    .client-card-logo {
+      width: 36px;
+      height: 36px;
+      border-radius: 6px;
+      object-fit: contain;
+      flex-shrink: 0;
+      background: #fff;
+      padding: 3px;
+      border: 1px solid #eee;
+    }
+
+    .client-card-info {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+
+    .client-card-name {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      line-height: 1.2;
+    }
+
+    .client-card-meta {
+      font-size: 0.6rem;
+      color: var(--text-muted);
+      letter-spacing: 0.3px;
+      line-height: 1.3;
+    }
+
+    @media print {
+      .client-card {
+        break-inside: avoid;
+        box-shadow: none !important;
+        transform: none !important;
+      }
+      .client-card::before {
+        transform: scaleY(1);
+      }
+      .client-card-logo {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+
+    /* Projects */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .project-card {
+      border: 1px solid var(--border-light);
+      border-radius: 6px;
+      padding: 1.1rem 1.2rem;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      position: relative;
+    }
+
+    .project-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--accent);
+      border-radius: 6px 6px 0 0;
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+
+    .project-card:hover {
+      border-color: var(--accent-border);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    }
+
+    .project-card:hover::before {
+      opacity: 1;
+    }
+
+    .project-name {
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--text-primary);
+      margin-bottom: 0.2rem;
+    }
+
+    .project-role {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.4rem;
+    }
+
+    .project-stack {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-bottom: 0.4rem;
+    }
+
+    .project-desc {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    /* Education */
+    .education-item {
+      margin-bottom: 1rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .education-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .edu-title {
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--text-primary);
+    }
+
+    .edu-institution {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+    }
+
+    .edu-date {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-top: 0.15rem;
+    }
+
+    .edu-details {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 0.2rem;
+      font-style: italic;
+    }
+
+    /* TODO marker for user */
+    .todo-marker {
+      background: #fef3c7;
+      border: 1px dashed #d97706;
+      border-radius: 4px;
+      padding: 0.8rem 1rem;
+      font-size: 0.82rem;
+      color: #92400e;
+      line-height: 1.5;
+    }
+
+    .todo-marker strong {
+      display: block;
+      margin-bottom: 0.3rem;
+      color: #78350f;
+    }
+
+    /* Footer */
+    .cv-footer {
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border-light);
+      text-align: center;
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      letter-spacing: 1px;
+    }
+
+    /* ============================================
+       PRINT STYLES
+       ============================================ */
+    @media print {
+      html { font-size: 13px; }
+
+      body {
+        background: white;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .cv-wrapper {
+        margin: 0;
+        box-shadow: none;
+        max-width: none;
+        min-height: auto;
+      }
+
+      .sidebar {
+        padding: 1.5rem 1.3rem;
+      }
+
+      .sidebar::after {
+        display: none;
+      }
+
+      .main-content {
+        padding: 1.5rem 2rem;
+      }
+
+      .todo-marker {
+        display: none;
+      }
+
+      .project-card:hover::before {
+        opacity: 0;
+      }
+
+      .skill-tag:hover {
+        background: var(--accent-soft);
+      }
+
+      a { color: inherit !important; }
+
+      .cv-wrapper {
+        grid-template-columns: 260px 1fr;
+      }
+
+      .cv-name { font-size: 2.2rem; }
+      .section-title { font-size: 1.3rem; }
+
+      @page {
+        margin: 0;
+        size: A4;
+      }
+
+      .section {
+        page-break-inside: avoid;
+      }
+
+      .experience-item {
+        page-break-inside: avoid;
+      }
+    }
+
+    /* ============================================
+       RESPONSIVE (for screen sharing/mobile)
+       ============================================ */
+    @media screen and (max-width: 768px) {
+      .cv-wrapper {
+        grid-template-columns: 1fr;
+        margin: 0;
+      }
+
+      .sidebar {
+        padding: 2rem;
+      }
+
+      .sidebar::after {
+        display: none;
+      }
+
+      .main-content {
+        padding: 2rem;
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="cv-wrapper">
+
+  <!-- ==========================================
+       SIDEBAR
+       ========================================== -->
+  <aside class="sidebar">
+
+    <div class="photo-container">
+      <div class="photo">
+        <!-- REEMPLAZAR con: <img src="tu-foto.jpg" alt="Alex Bautista"> -->
+        AB
+      </div>
+    </div>
+
+    <!-- Contact -->
+    <div class="sidebar-section">
+      <div class="sidebar-title">Contacto</div>
+      <div class="contact-item">
+        <span class="contact-label">Ubicaci&oacute;n</span>
+        Bogot&aacute;, Colombia
+      </div>
+      <div class="contact-item">
+        <span class="contact-label">Tel&eacute;fono</span>
+        (+57) 350 453 21 56
+      </div>
+      <div class="contact-item">
+        <span class="contact-label">Email</span>
+        <a href="mailto:lex.magno@gmail.com">lex.magno@gmail.com</a>
+      </div>
+    </div>
+
+    <!-- Links -->
+    <div class="sidebar-section">
+      <div class="sidebar-title">Links</div>
+      <a href="https://abautixta.com" class="link-item" target="_blank">
+        <span class="link-label">Portfolio</span> &mdash; abautixta.com
+      </a>
+      <a href="https://linkedin.com/in/abautixta" class="link-item" target="_blank">
+        <span class="link-label">LinkedIn</span> &mdash; /in/abautixta
+      </a>
+      <a href="https://github.com/Lu7h0r" class="link-item" target="_blank">
+        <span class="link-label">GitHub</span> &mdash; Lu7h0r
+      </a>
+    </div>
+
+    <!-- Technical Skills -->
+    <div class="sidebar-section">
+      <div class="sidebar-title">Competencias T&eacute;cnicas</div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">JavaScript Ecosystem</div>
+        <div class="skill-tags">
+          <span class="skill-tag">TypeScript</span>
+          <span class="skill-tag">Node.js</span>
+          <span class="skill-tag">NestJS</span>
+          <span class="skill-tag">React</span>
+          <span class="skill-tag">Next.js</span>
+          <span class="skill-tag">Angular</span>
+          <span class="skill-tag">Vue.js</span>
+          <span class="skill-tag">Astro</span>
+          <span class="skill-tag">Express</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">E-commerce & PHP</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Magento 2</span>
+          <span class="skill-tag">Bagisto</span>
+          <span class="skill-tag">Laravel</span>
+          <span class="skill-tag">WordPress</span>
+          <span class="skill-tag">WooCommerce</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">Cloud, Data & DevOps</div>
+        <div class="skill-tags">
+          <span class="skill-tag">MongoDB</span>
+          <span class="skill-tag">MySQL</span>
+          <span class="skill-tag">Supabase</span>
+          <span class="skill-tag">PostgreSQL</span>
+          <span class="skill-tag">Docker</span>
+          <span class="skill-tag">AWS</span>
+          <span class="skill-tag">Vercel</span>
+          <span class="skill-tag">Git</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">IA & Automatizaci&oacute;n</div>
+        <div class="skill-tags">
+          <span class="skill-tag">n8n</span>
+          <span class="skill-tag">AI APIs</span>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">Web Scraping</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">Frontend & UI</div>
+        <div class="skill-tags">
+          <span class="skill-tag">TailwindCSS</span>
+          <span class="skill-tag">React Native</span>
+          <span class="skill-tag">SASS</span>
+          <span class="skill-tag">Responsive</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Languages -->
+    <div class="sidebar-section">
+      <div class="sidebar-title">Idiomas</div>
+      <div class="language-item">
+        <span class="language-name">Espa&ntilde;ol</span>
+        <span class="language-level">&mdash; Nativo</span>
+      </div>
+      <div class="language-item">
+        <span class="language-name">Ingl&eacute;s</span>
+        <span class="language-level">&mdash; Intermedio-Avanzado (T&eacute;cnico)</span>
+      </div>
+    </div>
+
+  </aside>
+
+  <!-- ==========================================
+       MAIN CONTENT
+       ========================================== -->
+  <main class="main-content">
+
+    <!-- Header -->
+    <header class="cv-header">
+      <h1 class="cv-name">Alex Bautista</h1>
+      <p class="cv-title">Solutions Architect &amp; Technical Lead</p>
+    </header>
+
+    <!-- Profile -->
+    <section class="section">
+      <h2 class="section-title">Perfil Profesional</h2>
+      <p class="profile-text">
+        <strong>Arquitecto de Soluciones JavaScript-Native</strong> con m&aacute;s de 10 a&ntilde;os
+        de experiencia en ingenier&iacute;a web. Dise&ntilde;o ecosistemas resilientes que conectan
+        <strong>sistemas legacy con arquitecturas cloud modernas</strong>. Especialista en plataformas
+        e-commerce enterprise (Magento&nbsp;2, Bagisto), desarrollo de productos
+        <strong>SaaS</strong> (Node.js/NestJS/MongoDB) y orquestaci&oacute;n de migraciones de datos
+        complejas. Enfoque pragm&aacute;tico: c&oacute;digo limpio, arquitecturas escalables y
+        entrega continua de valor. <strong>Impulsor activo de IA como acelerador de
+        ingenier&iacute;a</strong> &mdash; integro herramientas de inteligencia artificial en cada
+        fase del ciclo de desarrollo para multiplicar productividad y calidad.
+      </p>
+    </section>
+
+    <!-- Experience -->
+    <section class="section">
+      <h2 class="section-title">Experiencia Profesional</h2>
+      <div class="experience-list">
+
+        <div class="experience-item current">
+          <div class="exp-title">Solutions Architect &amp; Technical Lead</div>
+          <div class="exp-company">Devir Americas &mdash; Colombia</div>
+          <div class="exp-company-desc">Editorial internacional de juegos de mesa y entretenimiento &mdash; Presencia en +20 pa&iacute;ses</div>
+          <div class="exp-date">2024 &mdash; Presente</div>
+          <div class="exp-description">
+            <ul>
+              <li>Transformaci&oacute;n tecnol&oacute;gica cerrando la brecha entre sistemas Legacy y arquitecturas modernas en la nube</li>
+              <li>Arquitectura SaaS: dise&ntilde;&eacute; &laquo;Organized Play&raquo;, plataforma de gesti&oacute;n de torneos con Node.js, MongoDB y control de acceso RBAC</li>
+              <li>Ingenier&iacute;a de Datos: migraci&oacute;n de +14,000 SKUs mediante pipelines personalizados con Python y Node.js desde sistemas sin API</li>
+              <li>B2B E-commerce: implementaci&oacute;n de reglas complejas en WooCommerce para precios mayoristas, stock en tiempo real y restricciones regionales</li>
+            </ul>
+            <div class="exp-clients">
+              <div class="exp-clients-label">Plataformas desarrolladas</div>
+              <div class="client-links">
+                <a href="https://www.deviramericas.com" class="client-link" target="_blank">deviramericas.com</a>
+                <a href="https://www.devirportal.com" class="client-link" target="_blank">devirportal.com</a>
+                <a href="https://hub.deviramericas.dev" class="client-link" target="_blank">hub.deviramericas.dev</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="experience-item">
+          <div class="exp-title">Magento Frontend Developer</div>
+          <div class="exp-company">Infracommerce Latam (ex Summa Solutions) &mdash; Argentina</div>
+          <div class="exp-company-desc">Mayor operador de e-commerce full-service de Latinoam&eacute;rica &mdash; Empresa p&uacute;blica (B3: IFCM3)</div>
+          <div class="exp-date">Abril 2021 &mdash; Abril 2024 &middot; 3 a&ntilde;os</div>
+          <div class="exp-description">
+            <ul>
+              <li>Desarrollo frontend de proyectos e-commerce enterprise para marcas l&iacute;deres de LATAM sobre Magento 2 / Adobe Commerce</li>
+              <li>Arquitectura de componentes UI para secciones cr&iacute;ticas de conversi&oacute;n: checkout, mi cuenta y flujos de compra</li>
+              <li>Colaboraci&oacute;n con equipos distribuidos en operaciones multipa&iacute;s (Argentina, Chile, Per&uacute;, M&eacute;xico, Colombia)</li>
+            </ul>
+            <div class="client-showcase">
+              <div class="client-showcase-label">Portafolio de clientes enterprise</div>
+              <div class="client-grid">
+                <a href="https://tienda.ricoh-americalatina.com" class="client-card" target="_blank">
+                  <img src="https://tienda.ricoh-americalatina.com/media/wysiwyg/Subtraction_1_2.png" alt="Ricoh" class="client-card-logo">
+                  <div class="client-card-info">
+                    <span class="client-card-name">Ricoh</span>
+                    <span class="client-card-meta">LATAM &middot; B2B</span>
+                  </div>
+                </a>
+                <a href="https://www.cetrogar.com.ar" class="client-card" target="_blank">
+                  <img src="https://www.cetrogar.com.ar/media/favicon/default/favicon.ico" alt="Cetrogar" class="client-card-logo">
+                  <div class="client-card-info">
+                    <span class="client-card-name">Cetrogar</span>
+                    <span class="client-card-meta">Argentina &middot; Retail</span>
+                  </div>
+                </a>
+                <a href="https://www.gilsa.com" class="client-card" target="_blank">
+                  <img src="https://www.gilsa.com/static/version1770417013/frontend/Gilsa/mexico/es_MX/Magento_Theme/apple-icon-180x180.png" alt="GILSA" class="client-card-logo">
+                  <div class="client-card-info">
+                    <span class="client-card-name">GILSA</span>
+                    <span class="client-card-meta">M&eacute;xico &middot; Construcci&oacute;n</span>
+                  </div>
+                </a>
+                <a href="https://www.colun.cl" class="client-card" target="_blank">
+                  <img src="https://www.colun.cl/admin/archivos/imagenes/marcas/moj6FdRfieC6U75TwPJq.png" alt="Colun" class="client-card-logo">
+                  <div class="client-card-info">
+                    <span class="client-card-name">Colun</span>
+                    <span class="client-card-meta">Chile &middot; Industria</span>
+                  </div>
+                </a>
+                <a href="https://www.efe.com.pe" class="client-card" target="_blank">
+                  <img src="https://www.efe.com.pe/static/version1770030752/frontend/Grupoefe/default/es_PE/images/logo-efe-160.png" alt="Tiendas EFE" class="client-card-logo">
+                  <div class="client-card-info">
+                    <span class="client-card-name">Tiendas EFE</span>
+                    <span class="client-card-meta">Per&uacute; &middot; Retail</span>
+                  </div>
+                </a>
+                <a href="https://www.lacuracao.pe" class="client-card" target="_blank">
+                  <img src="https://www.lacuracao.pe/static/version1770030752/frontend/Grupoefe/lco/es_PE/images/logo.svg" alt="La Curacao" class="client-card-logo">
+                  <div class="client-card-info">
+                    <span class="client-card-name">La Curacao</span>
+                    <span class="client-card-meta">Per&uacute; &middot; Retail</span>
+                  </div>
+                </a>
+                <a href="https://www.rosen.cl" class="client-card" target="_blank">
+                  <img src="https://www.rosen.cl/media/logo/stores/1/logo-rosen.webp" alt="Rosen" class="client-card-logo">
+                  <div class="client-card-info">
+                    <span class="client-card-name">Rosen</span>
+                    <span class="client-card-meta">Chile &middot; Hogar</span>
+                  </div>
+                </a>
+                <a href="https://ar.isadoraonline.com" class="client-card" target="_blank">
+                  <img src="https://ar-isadora.bluestargroup-cdn.com/media/favicon/stores/2/Logo-ISADORA-icono.png" alt="Isadora" class="client-card-logo">
+                  <div class="client-card-info">
+                    <span class="client-card-name">Isadora</span>
+                    <span class="client-card-meta">LATAM &middot; Moda</span>
+                  </div>
+                </a>
+                <a href="https://www.todomoda.com" class="client-card" target="_blank">
+                  <img src="https://www.todomoda.com/selector/images/todomoda.svg" alt="TodoModa" class="client-card-logo">
+                  <div class="client-card-info">
+                    <span class="client-card-name">TodoModa</span>
+                    <span class="client-card-meta">LATAM &middot; 800+ tiendas</span>
+                  </div>
+                </a>
+                <a href="https://bsg.global" class="client-card" target="_blank">
+                  <img src="https://bsg.global/assets/logos/logo_desktop.png" alt="BSG Global" class="client-card-logo">
+                  <div class="client-card-info">
+                    <span class="client-card-name">BSG Global</span>
+                    <span class="client-card-meta">10+ pa&iacute;ses &middot; Corp</span>
+                  </div>
+                </a>
+                <a href="https://www.ceven.com" class="client-card" target="_blank">
+                  <img src="https://qa.ceven.com/Assets/LOGO-CEVEN.png" alt="Ceven" class="client-card-logo">
+                  <div class="client-card-info">
+                    <span class="client-card-name">Ceven</span>
+                    <span class="client-card-meta">Argentina &middot; Tech</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="experience-item">
+          <div class="exp-title">Magento Frontend Developer</div>
+          <div class="exp-company">Xpectrum Technologies &mdash; Colombia</div>
+          <div class="exp-company-desc">Consultora especializada en soluciones Adobe Commerce / Magento</div>
+          <div class="exp-date">Noviembre 2020 &mdash; Marzo 2021</div>
+          <div class="exp-description">
+            <ul>
+              <li>Desarrollo de interfaces frontend para proyectos en Magento 2 Cloud (Adobe Commerce)</li>
+              <li>Implementaci&oacute;n de funcionalidades e-commerce siguiendo est&aacute;ndares de la plataforma</li>
+            </ul>
+            <div class="client-showcase">
+              <div class="client-showcase-label">Grupo EFE &mdash; Cliente enterprise</div>
+              <div class="client-grid" style="grid-template-columns: 1fr;">
+                <a href="https://www.efe.com.pe" class="client-card" target="_blank">
+                  <img src="https://www.efe.com.pe/static/version1765969876/frontend/Grupoefe/default/es_PE/images/logo-efe-160.png" alt="Tiendas EFE" class="client-card-logo">
+                  <div class="client-card-info">
+                    <span class="client-card-name">Tiendas EFE</span>
+                    <span class="client-card-meta">Per&uacute; &middot; Retail &middot; Grupo EFE</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="experience-item">
+          <div class="exp-title">Desarrollador Frontend</div>
+          <div class="exp-company">Controles Empresariales &mdash; Bogot&aacute;, Colombia</div>
+          <div class="exp-company-desc">L&iacute;der en soluciones tecnol&oacute;gicas empresariales &mdash; Partner de Microsoft, Cisco, HP, Adobe y Red Hat</div>
+          <div class="exp-date">Marzo 2019 &mdash; Julio 2020</div>
+          <div class="exp-description">
+            <ul>
+              <li>Desarrollo frontend para soluciones de comercio electr&oacute;nico con integraciones Magento&nbsp;2 y aplicaciones internas</li>
+              <li>Integraciones con sistemas SARLAFT (prevenci&oacute;n de lavado de activos) y firma digital con eSignAnywhere</li>
+              <li>Construcci&oacute;n de herramientas internas con Angular, Node.js y Python</li>
+            </ul>
+            <div class="exp-clients">
+              <div class="exp-clients-label">Plataforma</div>
+              <div class="client-links">
+                <a href="https://www.controlesempresariales.com" class="client-link" target="_blank">controlesempresariales.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="experience-item">
+          <div class="exp-title">Desarrollador Angular &mdash; Sector Financiero</div>
+          <div class="exp-company">Premier Credit &mdash; Bogot&aacute;, Colombia</div>
+          <div class="exp-company-desc">Empresa de servicios financieros y cr&eacute;dito al consumo</div>
+          <div class="exp-date">Diciembre 2019 &mdash; Febrero 2020</div>
+          <div class="exp-description">
+            <ul>
+              <li>Desarrollo de aplicaciones frontend en Angular para plataformas de servicios financieros</li>
+              <li>Implementaci&oacute;n de l&oacute;gica de negocio compleja con enfoque en UX</li>
+            </ul>
+            <div class="client-showcase">
+              <div class="client-showcase-label">Proyecto</div>
+              <div class="client-grid" style="grid-template-columns: 1fr;">
+                <a href="https://www.santander.com" class="client-card" target="_blank">
+                  <img src="https://companieslogo.com/img/orig/SAN-8a4d0f73.png?t=1720244493" alt="Banco Santander" class="client-card-logo">
+                  <div class="client-card-info">
+                    <span class="client-card-name">Banco Santander</span>
+                    <span class="client-card-meta">Colombia &middot; Banca &middot; Fortune 500</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="experience-item">
+          <div class="exp-title">Consultor SEO T&eacute;cnico</div>
+          <div class="exp-company">Experian &mdash; Bogot&aacute;, Colombia</div>
+          <div class="exp-company-desc">Multinacional &mdash; Bureau de cr&eacute;dito global, Fortune 500 (LSE: EXPN)</div>
+          <div class="exp-date">Agosto 2019 &mdash; Noviembre 2019</div>
+          <div class="exp-description">
+            <ul>
+              <li>Auditor&iacute;a y optimizaci&oacute;n SEO t&eacute;cnico para aplicaciones Angular</li>
+              <li>Mejora de rendimiento y posicionamiento en motores de b&uacute;squeda</li>
+            </ul>
+            <div class="client-showcase">
+              <div class="client-showcase-label">Proyecto</div>
+              <div class="client-grid" style="grid-template-columns: 1fr;">
+                <a href="https://www.midatacredito.com" class="client-card" target="_blank">
+                  <img src="midatacredito-logo.svg" alt="MiDataCr&eacute;dito" class="client-card-logo" style="background: #fff; padding: 4px; border-radius: 6px; width: 100px; height: auto;">
+                  <div class="client-card-info">
+                    <span class="client-card-name">MiDataCr&eacute;dito</span>
+                    <span class="client-card-meta">Colombia &middot; Fintech &middot; +1M usuarios</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="experience-item">
+          <div class="exp-title">Desarrollador Full Stack</div>
+          <div class="exp-company">Frecuencia Capital &mdash; Bogot&aacute;, Colombia</div>
+          <div class="exp-company-desc">Agencia digital especializada en e-commerce y desarrollo web corporativo</div>
+          <div class="exp-date">Enero 2016 &mdash; Enero 2019 &middot; 3 a&ntilde;os</div>
+          <div class="exp-description">
+            <ul>
+              <li>Desarrollo full stack para plataformas de comercio electr&oacute;nico y sitios web corporativos</li>
+              <li>Arquitectura de soluciones con WordPress, WooCommerce y CMS empresariales</li>
+            </ul>
+            <div class="client-showcase">
+              <div class="client-showcase-label">Proyecto destacado</div>
+              <div class="client-grid" style="grid-template-columns: 1fr;">
+                <a href="https://www.ospinas.com.co" class="client-card" target="_blank">
+                  <img src="https://www.ospinas.com.co/views/images/logo.svg" alt="Ospinas" class="client-card-logo" style="background: #fff; padding: 6px; border-radius: 6px;">
+                  <div class="client-card-info">
+                    <span class="client-card-name">Ospinas &amp; C&iacute;a S.A.</span>
+                    <span class="client-card-meta">Colombia &middot; Construcci&oacute;n &middot; +94 a&ntilde;os</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="experience-item">
+          <div class="exp-title">Administrador &amp; Desarrollador Web</div>
+          <div class="exp-company">Genius Cube Store &mdash; Bogot&aacute;, Colombia</div>
+          <div class="exp-company-desc">E-commerce de productos tecnol&oacute;gicos y accesorios</div>
+          <div class="exp-date">Noviembre 2013 &mdash; Marzo 2017</div>
+          <div class="exp-description">
+            <ul>
+              <li>Administraci&oacute;n y desarrollo de tienda e-commerce con WordPress</li>
+              <li>Personalizaci&oacute;n de funcionalidades y optimizaci&oacute;n SEO</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section">
+      <h2 class="section-title">Proyectos Arquitect&oacute;nicos Destacados</h2>
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <div class="project-name">Global Organized Play</div>
+          <div class="project-role">Lead Architect &mdash; SaaS Platform</div>
+          <div class="project-stack">Node.js &middot; MongoDB &middot; Vue.js</div>
+          <div class="project-desc">
+            Plataforma SaaS para gesti&oacute;n de torneos a nivel global.
+            Miles de usuarios activos en las Am&eacute;ricas.
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-name">Data Hub Migration</div>
+          <div class="project-role">Data Engineer &mdash; Legacy Rescue</div>
+          <div class="project-stack">Python &middot; Node.js &middot; Web Scraping</div>
+          <div class="project-desc">
+            Ingenier&iacute;a inversa y extracci&oacute;n de +14,000 SKUs
+            desde sistemas legacy sin acceso a API.
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-name">Portal B2B Industrial</div>
+          <div class="project-role">Magento Architect &mdash; Enterprise</div>
+          <div class="project-stack">Magento 2 &middot; PHP &middot; CRM Integration</div>
+          <div class="project-desc">
+            Middleware bidireccional para sincronizaci&oacute;n CRM y
+            m&oacute;dulos de cotizaci&oacute;n personalizada.
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-name">eSIM Market Platform</div>
+          <div class="project-role">Lead Developer &mdash; Marketplace</div>
+          <div class="project-stack">Bagisto &middot; Laravel &middot; Payment APIs</div>
+          <div class="project-desc">
+            Marketplace con provisi&oacute;n de eSIM en tiempo real e
+            integraci&oacute;n de pagos automatizada.
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-name">Automation Pipelines</div>
+          <div class="project-role">n8n Specialist &mdash; Business Automation</div>
+          <div class="project-stack">n8n &middot; APIs &middot; Webhooks &middot; AI</div>
+          <div class="project-desc">
+            Flujos de automatizaci&oacute;n complejos conectando m&uacute;ltiples
+            sistemas empresariales con integraci&oacute;n de IA.
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-name">AI-Enhanced Applications</div>
+          <div class="project-role">AI Integration Lead</div>
+          <div class="project-stack">AI APIs &middot; Node.js &middot; Supabase &middot; Vercel</div>
+          <div class="project-desc">
+            Integraci&oacute;n de capacidades de IA moderna en aplicaciones
+            de producci&oacute;n para experiencias de usuario aumentadas.
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="section">
+      <h2 class="section-title">Formaci&oacute;n &amp; Desarrollo Profesional</h2>
+
+      <div class="education-item">
+        <div class="edu-title">An&aacute;lisis &amp; Desarrollo de Software</div>
+        <div class="edu-institution">SENA &mdash; Bogot&aacute;, Colombia</div>
+        <div class="edu-date">2011 &mdash; 2012</div>
+      </div>
+
+      <div class="education-item">
+        <div class="edu-title">Magento 2 Professional Track</div>
+        <div class="edu-institution">M.Academy &mdash; 4 Certificaciones</div>
+        <div class="edu-date">2022 &mdash; 2023</div>
+        <div class="edu-details">Power Theming &middot; UI Components &middot; Coding Kickstart &middot; JS Development Fundamentals</div>
+      </div>
+
+      <div class="education-item">
+        <div class="edu-title">+12 Certificaciones en JavaScript, Frameworks &amp; Desarrollo Web</div>
+        <div class="edu-institution">Udemy &amp; Plataformas Online</div>
+        <div class="edu-date">2018 &mdash; 2023</div>
+        <div class="edu-details">TypeScript &middot; Angular &middot; Node.js &middot; Laravel &middot; React Native &middot; SQL &middot; JavaScript Avanzado</div>
+      </div>
+
+      <div class="education-item">
+        <div class="edu-title">Bachiller Acad&eacute;mico</div>
+        <div class="edu-institution">CANAPRO</div>
+        <div class="edu-date">2008 &mdash; 2012</div>
+      </div>
+
+    </section>
+
+    <!-- Footer -->
+    <div class="cv-footer">
+      Actualizado &mdash; Febrero 2026
+    </div>
+
+  </main>
+
+</div>
+
+</body>
+</html>
