@@ -1,0 +1,14 @@
+node_modules/
+.pnpm-store/
+pnpm-lock.yaml
+package.json
+gsap-threejs-demo/
+assets/
+index.html
+index_old.html
+index_traditional_backup.html
+intro_test.html
+spotlight_test.html
+jarvis-rules.md
+REPORTE-PERFIL-ACADEMICO-SOLUTIONS-ARCHITECT-2025.md
+.claude/
