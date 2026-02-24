@@ -39,213 +39,90 @@ function t(val, lang) {
 // --- CV Data ---
 var DATA = {
   meta: {
-    name: 'Alex Bautista',
-    title: 'Solutions Architect & Technical Lead',
-    photo: 'alex.png'
+    name: 'Nicolás Fitzgerald Muñoz',
+    title: { en: 'University Lecturer · Data Science & Mathematics', es: 'Docente Universitario · Ciencia de Datos y Matemáticas' },
+    photo: ''
   },
 
   contact: [
-    { icon: 'mapPin', label: { en: 'Location', es: 'Ubicación' }, value: 'Bogotá, Colombia' },
-    { icon: 'phone',  label: { en: 'Phone', es: 'Teléfono' },    value: '(+57) 350 453 21 56' },
-    { icon: 'mail',   label: 'Email', value: 'lex.magno@gmail.com', href: 'mailto:lex.magno@gmail.com' }
+    { icon: 'mapPin', label: { en: 'Location', es: 'Ubicación' }, value: { en: 'Chile & Colombia', es: 'Chile y Colombia' } },
+    { icon: 'phone',  label: { en: 'Phone', es: 'Teléfono' },    value: { en: 'Available upon request', es: 'Disponible a solicitud' } },
+    { icon: 'mail',   label: 'Email', value: { en: 'Available upon request', es: 'Disponible a solicitud' } }
   ],
 
-  links: [
-    { icon: 'globe',    label: 'Portfolio', display: 'abautixta.com',   href: 'https://abautixta.com' },
-    { icon: 'linkedin', label: 'LinkedIn',  display: '/in/abautixta',   href: 'https://linkedin.com/in/abautixta' },
-    { icon: 'github',   label: 'GitHub',    display: 'Lu7h0r',          href: 'https://github.com/Lu7h0r' }
-  ],
+  links: [],
 
   skills: [
-    { icon: 'terminal', title: 'JavaScript Ecosystem', tags: ['TypeScript', 'Node.js', 'NestJS', 'React', 'Next.js', 'Angular', 'Vue.js', 'Astro', 'Express'] },
-    { icon: 'cart',     title: 'E-commerce & PHP',     tags: ['Magento 2', 'Adobe Commerce', 'Bagisto', 'Laravel', 'WordPress', 'WooCommerce'] },
-    { icon: 'cloud',    title: 'Cloud, Data & DevOps', tags: ['MongoDB', 'MySQL', 'Supabase', 'PostgreSQL', 'Docker', 'AWS', 'Vercel', 'Git'] },
-    { icon: 'cpu',      title: { en: 'AI & Automation', es: 'IA & Automatización' }, tags: ['n8n', 'AI APIs', 'Python', 'Web Scraping'] },
-    { icon: 'layout',   title: 'Frontend & UI',        tags: ['TailwindCSS', 'React Native', 'SASS', 'Responsive'] }
+    { icon: 'terminal', title: { en: 'Programming', es: 'Programación' }, tags: ['Python', 'R'] },
+    { icon: 'cpu',      title: { en: 'Data Science', es: 'Ciencia de Datos' }, tags: ['Modelado estadístico', 'Análisis de datos', 'Aprendizaje automático', 'Visualización'] },
+    { icon: 'layers',   title: { en: 'Mathematics', es: 'Matemáticas' }, tags: ['Álgebra lineal', 'Cálculo', 'Probabilidad', 'Optimización'] },
+    { icon: 'cloud',    title: { en: 'Research & Teaching', es: 'Investigación & Docencia' }, tags: ['Diseño de cursos', 'Evaluación', 'Proyectos académicos'] }
   ],
 
   languages: [
     { name: { en: 'Spanish', es: 'Español' }, level: { en: 'Native', es: 'Nativo' } },
-    { name: { en: 'English', es: 'Inglés' },  level: { en: 'Intermediate', es: 'Intermedio' } }
+    { name: { en: 'English', es: 'Inglés' },  level: { en: 'C1', es: 'C1' } }
   ],
 
   profile: {
-    en: '<strong>JavaScript-Native Solutions Architect</strong> with 10+ years of experience in web engineering. I design resilient ecosystems that bridge <strong>legacy systems with modern cloud architectures</strong>. Specialist in enterprise e-commerce platforms (Magento\u00a02 / Adobe Commerce, Bagisto), <strong>SaaS</strong> product development (Node.js/NestJS/MongoDB), and complex data migration orchestration. Pragmatic approach: clean code, scalable architectures, and continuous value delivery. <strong>Active advocate for AI as an engineering accelerator</strong> \u2014 I integrate AI tools at every stage of the development lifecycle to multiply productivity and quality.',
-    es: '<strong>Arquitecto de Soluciones JavaScript-Native</strong> con más de 10 años de experiencia en ingeniería web. Diseño ecosistemas resilientes que conectan <strong>sistemas legacy con arquitecturas cloud modernas</strong>. Especialista en plataformas e-commerce enterprise (Magento\u00a02 / Adobe Commerce, Bagisto), desarrollo de productos <strong>SaaS</strong> (Node.js/NestJS/MongoDB) y orquestación de migraciones de datos complejas. Enfoque pragmático: código limpio, arquitecturas escalables y entrega continua de valor. <strong>Impulsor activo de IA como acelerador de ingeniería</strong> \u2014 integro herramientas de inteligencia artificial en cada fase del ciclo de desarrollo para multiplicar productividad y calidad.'
+    en: '<strong>University lecturer</strong> with a master’s degree and a <strong>PhD in progress</strong>, focused on <strong>data science and mathematics</strong>. I design and teach courses grounded in rigorous quantitative foundations, bridging theory with applied analysis using <strong>Python and R</strong>. Experienced in academic collaboration across universities in Chile and Colombia, with a commitment to clear communication, reproducible analysis, and student-centered learning.',
+    es: '<strong>Docente universitario</strong> con magíster y <strong>doctorado en curso</strong>, enfocado en <strong>ciencia de datos y matemáticas</strong>. Diseño e imparto cursos con fundamentos cuantitativos rigurosos, conectando teoría y análisis aplicado con <strong>Python y R</strong>. Experiencia académica en universidades de Chile y Colombia, con énfasis en comunicación clara, análisis reproducible y aprendizaje centrado en el estudiante.'
   },
+
+  technicalHighlights: [
+    'Python',
+    'R',
+    'Ciencia de datos aplicada',
+    'Modelado estadístico',
+    'Matemáticas aplicadas',
+    'Análisis reproducible'
+  ],
 
   experience: [
     {
-      title: 'Solutions Architect & Technical Lead',
-      company: 'Devir Americas \u2014 Colombia',
-      companyDesc: { en: 'International board game & entertainment publisher \u2014 Presence in 20+ countries', es: 'Editorial internacional de juegos de mesa y entretenimiento \u2014 Presencia en +20 países' },
-      date: { en: '2024 \u2014 Present', es: '2024 \u2014 Presente' },
+      title: { en: 'University Lecturer', es: 'Docente Universitario' },
+      company: { en: 'Universities in Chile and Colombia', es: 'Universidades en Chile y Colombia' },
+      companyDesc: { en: 'Teaching and academic collaboration', es: 'Docencia y colaboración académica' },
+      date: { en: 'Present', es: 'Actualidad' },
       current: true,
       bullets: [
-        { en: 'Technology transformation bridging the gap between legacy systems and modern cloud architectures', es: 'Transformación tecnológica cerrando la brecha entre sistemas Legacy y arquitecturas modernas en la nube' },
-        { en: 'SaaS Architecture: designed \u00abOrganized Play\u00bb, a global tournament management platform with Node.js, MongoDB, and RBAC access control', es: 'Arquitectura SaaS: diseñé \u00abOrganized Play\u00bb, plataforma de gestión de torneos con Node.js, MongoDB y control de acceso RBAC' },
-        { en: 'Data Engineering: migration of 14,000+ SKUs through custom Python/Node.js pipelines from API-less legacy systems', es: 'Ingeniería de Datos: migración de +14,000 SKUs mediante pipelines personalizados con Python y Node.js desde sistemas sin API' },
-        { en: 'B2B E-commerce: complex business rules in WooCommerce for wholesale pricing, real-time inventory, and regional restrictions', es: 'B2B E-commerce: implementación de reglas complejas en WooCommerce para precios mayoristas, stock en tiempo real y restricciones regionales' }
-      ],
-      clients: {
-        type: 'showcase',
-        label: { en: 'Platforms developed', es: 'Plataformas desarrolladas' },
-        items: [
-          { name: 'Devir Americas',    meta: { en: 'B2B E-commerce \u00b7 WooCommerce', es: 'E-commerce B2B \u00b7 WooCommerce' }, url: 'https://www.deviramericas.com', logo: 'devir_logo2.png', logoStyle: 'background:#1a2744;padding:4px;border-radius:6px' },
-          { name: 'Devir Portal',      meta: { en: 'Product Catalog \u00b7 Public', es: 'Catálogo de Productos \u00b7 Público' }, url: 'https://www.devirportal.com', logo: 'portal.png', logoStyle: 'background:#1a2744;padding:2px;border-radius:6px' },
-          { name: 'Hub Devir',         meta: { en: 'Internal \u00b7 SaaS Platform', es: 'Interno \u00b7 Plataforma SaaS' }, url: 'https://hub.deviramericas.dev', logo: 'devir_logo2.png', logoStyle: 'background:#1a2744;padding:4px;border-radius:6px' }
-        ]
-      }
-    },
-    {
-      title: 'Solutions Architect & Full-Stack Developer',
-      company: 'uTravel \u2014 Remote',
-      companyDesc: { en: 'E-commerce platform specialized in eSIM aggregation and sales for travelers', es: 'Plataforma e-commerce especializada en agregación y venta de eSIMs para viajeros' },
-      date: { en: 'October 2025 \u2014 Present', es: 'Octubre 2025 \u2014 Presente' },
-      current: true,
-      bullets: [
-        { en: 'Architecture and implementation of e-commerce platform on Laravel 11 + Bagisto, specialized in multi-provider eSIM aggregation and retail for international travelers', es: 'Arquitectura e implementación de plataforma e-commerce sobre Laravel 11 + Bagisto, especializada en agregación y venta de eSIMs de múltiples proveedores para viajeros internacionales' },
-        { en: 'Multi-provider aggregation system design with centralized orchestration, integrating APIs with heterogeneous auth schemes: OAuth 2.0 Client Credentials, AES-128-CBC + MD5 Signature, and OAuth Password Grant', es: 'Diseño de sistema de agregación multi-proveedor con orquestación centralizada, integrando APIs con esquemas de autenticación heterogéneos: OAuth 2.0 Client Credentials, AES-128-CBC + MD5 Signature y OAuth Password Grant' },
-        { en: 'Pricing engine with multilevel markup (Global \u2192 Provider \u2192 Individual plan), plan whitelist, and CSV import/export management via admin panel', es: 'Motor de pricing con markup multinivel (Global \u2192 Proveedor \u2192 Plan individual), whitelist de planes y gestión vía import/export CSV desde panel admin' },
-        { en: 'Full purchase flow: plan configurator with country/region filters, marked-up cart, payment gateway checkout, automatic eSIM activation, and QR delivery by email', es: 'Flujo completo de compra: configurador de planes con filtros por país/región, carrito con precios marcados, checkout con pasarela de pago, activación automática de eSIM y entrega de QR por email' },
-        { en: '<strong>Stack:</strong> PHP 8.2+, Laravel 11, Bagisto, Vue.js 3, Vite, MySQL 8, Redis, Elasticsearch, Pest PHP', es: '<strong>Stack:</strong> PHP 8.2+, Laravel 11, Bagisto, Vue.js 3, Vite, MySQL 8, Redis, Elasticsearch, Pest PHP' }
+        { en: 'Design and delivery of courses in mathematics, statistics, and data science', es: 'Diseño e impartición de cursos de matemáticas, estadística y ciencia de datos' },
+        { en: 'Integration of Python and R workflows for practical labs and assessments', es: 'Integración de flujos de trabajo en Python y R para laboratorios y evaluaciones' },
+        { en: 'Advising student projects and research-oriented coursework', es: 'Acompañamiento de proyectos estudiantiles y actividades con foco investigativo' }
       ]
     },
     {
-      title: 'Magento Frontend Developer',
-      company: 'Infracommerce Latam (ex Summa Solutions) \u2014 Argentina',
-      companyDesc: { en: 'Largest full-service e-commerce operator in Latin America \u2014 Public company (B3: IFCM3)', es: 'Mayor operador de e-commerce full-service de Latinoamérica \u2014 Empresa pública (B3: IFCM3)' },
-      date: { en: 'April 2021 \u2014 April 2024 \u00b7 3 years', es: 'Abril 2021 \u2014 Abril 2024 \u00b7 3 años' },
+      title: { en: 'Applied Data Science Projects', es: 'Proyectos de Ciencia de Datos Aplicada' },
+      company: { en: 'Academic and interdisciplinary initiatives', es: 'Iniciativas académicas e interdisciplinarias' },
+      companyDesc: { en: 'Research and quantitative analysis', es: 'Investigación y análisis cuantitativo' },
+      date: { en: 'Ongoing', es: 'En curso' },
       bullets: [
-        { en: 'Enterprise e-commerce frontend development for leading LATAM brands on Magento 2 / Adobe Commerce', es: 'Desarrollo frontend de proyectos e-commerce enterprise para marcas líderes de LATAM sobre Magento 2 / Adobe Commerce' },
-        { en: 'UI component architecture for high-conversion sections: checkout, my account, and purchase flows', es: 'Arquitectura de componentes UI para secciones críticas de conversión: checkout, mi cuenta y flujos de compra' },
-        { en: 'Collaboration with distributed teams across multi-country operations (Argentina, Chile, Peru, Mexico, Colombia)', es: 'Colaboración con equipos distribuidos en operaciones multipaís (Argentina, Chile, Perú, México, Colombia)' }
-      ],
-      clients: {
-        type: 'showcase',
-        label: { en: 'Enterprise client portfolio', es: 'Portafolio de clientes enterprise' },
-        items: [
-          { name: 'Ricoh',       meta: 'LATAM \u00b7 B2B',       url: 'https://tienda.ricoh-americalatina.com', logo: 'https://tienda.ricoh-americalatina.com/media/wysiwyg/Subtraction_1_2.png' },
-          { name: 'Cetrogar',    meta: 'Argentina \u00b7 Retail', url: 'https://www.cetrogar.com.ar',   logo: 'https://www.cetrogar.com.ar/media/favicon/default/favicon.ico' },
-          { name: 'GILSA',       meta: { en: 'Mexico \u00b7 Construction', es: 'México \u00b7 Construcción' }, url: 'https://www.gilsa.com', logo: 'https://www.gilsa.com/static/version1770417013/frontend/Gilsa/mexico/es_MX/Magento_Theme/apple-icon-180x180.png' },
-          { name: 'Colun',       meta: { en: 'Chile \u00b7 Industry', es: 'Chile \u00b7 Industria' }, url: 'https://www.colun.cl', logo: 'https://www.colun.cl/admin/archivos/imagenes/marcas/moj6FdRfieC6U75TwPJq.png' },
-          { name: 'Tiendas EFE', meta: { en: 'Peru \u00b7 Retail', es: 'Perú \u00b7 Retail' }, url: 'https://www.efe.com.pe', logo: 'https://www.efe.com.pe/static/version1770030752/frontend/Grupoefe/default/es_PE/images/logo-efe-160.png' },
-          { name: 'La Curacao',  meta: { en: 'Peru \u00b7 Retail', es: 'Perú \u00b7 Retail' }, url: 'https://www.lacuracao.pe', logo: 'https://www.lacuracao.pe/static/version1770030752/frontend/Grupoefe/lco/es_PE/images/logo.svg' },
-          { name: 'Rosen',       meta: { en: 'Chile \u00b7 Home', es: 'Chile \u00b7 Hogar' }, url: 'https://www.rosen.cl', logo: 'https://www.rosen.cl/media/logo/stores/1/logo-rosen.webp' },
-          { name: 'Isadora',     meta: { en: 'LATAM \u00b7 Fashion', es: 'LATAM \u00b7 Moda' }, url: 'https://ar.isadoraonline.com', logo: 'https://ar-isadora.bluestargroup-cdn.com/media/favicon/stores/2/Logo-ISADORA-icono.png' },
-          { name: 'TodoModa',    meta: { en: 'LATAM \u00b7 800+ stores', es: 'LATAM \u00b7 800+ tiendas' }, url: 'https://www.todomoda.com', logo: 'https://www.todomoda.com/selector/images/todomoda.svg' },
-          { name: 'BSG Global',  meta: { en: '10+ countries \u00b7 Corp', es: '10+ países \u00b7 Corp' }, url: 'https://bsg.global', logo: 'https://bsg.global/assets/logos/logo_desktop.png' },
-          { name: 'Ceven',       meta: 'Argentina \u00b7 Tech', url: 'https://www.ceven.com', logo: 'https://qa.ceven.com/Assets/LOGO-CEVEN.png' }
-        ]
-      }
-    },
-    {
-      title: 'Magento Frontend Developer',
-      company: 'Xpectrum Technologies \u2014 Colombia',
-      companyDesc: { en: 'Consulting firm specialized in Adobe Commerce / Magento solutions', es: 'Consultora especializada en soluciones Adobe Commerce / Magento' },
-      date: { en: 'November 2020 \u2014 March 2021', es: 'Noviembre 2020 \u2014 Marzo 2021' },
-      bullets: [
-        { en: 'Frontend interface development for Magento 2 Cloud (Adobe Commerce) projects', es: 'Desarrollo de interfaces frontend para proyectos en Magento 2 Cloud (Adobe Commerce)' },
-        { en: 'E-commerce feature implementation following platform standards', es: 'Implementación de funcionalidades e-commerce siguiendo estándares de la plataforma' }
-      ],
-      clients: {
-        type: 'showcase', singleCol: true,
-        label: { en: 'Grupo EFE \u2014 Enterprise client', es: 'Grupo EFE \u2014 Cliente enterprise' },
-        items: [
-          { name: 'Tiendas EFE', meta: { en: 'Peru \u00b7 Retail \u00b7 Grupo EFE', es: 'Perú \u00b7 Retail \u00b7 Grupo EFE' }, url: 'https://www.efe.com.pe', logo: 'https://www.efe.com.pe/static/version1770030752/frontend/Grupoefe/default/es_PE/images/logo-efe-160.png' }
-        ]
-      }
-    },
-    {
-      title: { en: 'Frontend Developer', es: 'Desarrollador Frontend' },
-      company: 'Controles Empresariales \u2014 Bogotá, Colombia',
-      companyDesc: { en: 'Enterprise technology solutions leader \u2014 Microsoft, Cisco, HP, Adobe & Red Hat Partner', es: 'Líder en soluciones tecnológicas empresariales \u2014 Partner de Microsoft, Cisco, HP, Adobe y Red Hat' },
-      date: { en: 'March 2019 \u2014 July 2020', es: 'Marzo 2019 \u2014 Julio 2020' },
-      bullets: [
-        { en: 'Frontend development for e-commerce solutions with Magento 2 integrations and internal applications', es: 'Desarrollo frontend para soluciones de comercio electrónico con integraciones Magento\u00a02 y aplicaciones internas' },
-        { en: 'Integrations with SARLAFT systems (anti-money laundering) and digital signatures via eSignAnywhere', es: 'Integraciones con sistemas SARLAFT (prevención de lavado de activos) y firma digital con eSignAnywhere' },
-        { en: 'Internal tooling built with Angular, Node.js, and Python', es: 'Construcción de herramientas internas con Angular, Node.js y Python' }
-      ],
-      clients: {
-        type: 'showcase', singleCol: true,
-        label: { en: 'Platform', es: 'Plataforma' },
-        items: [{ name: 'Controles Empresariales', meta: { en: 'Colombia \u00b7 Enterprise Tech', es: 'Colombia \u00b7 Tech Empresarial' }, url: 'https://www.controlesempresariales.com', logo: 'logo_coem.png' }]
-      }
-    },
-    {
-      title: { en: 'Angular Developer \u2014 Financial Sector', es: 'Desarrollador Angular \u2014 Sector Financiero' },
-      company: 'Premier Credit \u2014 Bogotá, Colombia',
-      companyDesc: { en: 'Financial services and consumer credit company', es: 'Empresa de servicios financieros y crédito al consumo' },
-      date: { en: 'December 2019 \u2014 February 2020', es: 'Diciembre 2019 \u2014 Febrero 2020' },
-      bullets: [
-        { en: 'Angular frontend application development for financial services platforms', es: 'Desarrollo de aplicaciones frontend en Angular para plataformas de servicios financieros' },
-        { en: 'Complex business logic implementation with UX-focused approach', es: 'Implementación de lógica de negocio compleja con enfoque en UX' }
-      ],
-      clients: {
-        type: 'showcase', singleCol: true,
-        label: { en: 'Project', es: 'Proyecto' },
-        items: [{ name: 'Banco Santander', meta: { en: 'Colombia \u00b7 Banking \u00b7 Fortune 500', es: 'Colombia \u00b7 Banca \u00b7 Fortune 500' }, url: 'https://www.santander.com', logo: 'https://companieslogo.com/img/orig/SAN-8a4d0f73.png?t=1720244493' }]
-      }
-    },
-    {
-      title: { en: 'Technical SEO Consultant', es: 'Consultor SEO Técnico' },
-      company: 'Experian \u2014 Bogotá, Colombia',
-      companyDesc: { en: 'Multinational \u2014 Global credit bureau, Fortune 500 (LSE: EXPN)', es: 'Multinacional \u2014 Bureau de crédito global, Fortune 500 (LSE: EXPN)' },
-      date: { en: 'August 2019 \u2014 November 2019', es: 'Agosto 2019 \u2014 Noviembre 2019' },
-      bullets: [
-        { en: 'Technical SEO audit and optimization for Angular applications', es: 'Auditoría y optimización SEO técnico para aplicaciones Angular' },
-        { en: 'Performance improvement and search engine ranking optimization', es: 'Mejora de rendimiento y posicionamiento en motores de búsqueda' }
-      ],
-      clients: {
-        type: 'showcase', singleCol: true,
-        label: { en: 'Project', es: 'Proyecto' },
-        items: [{ name: 'MiDataCrédito', meta: { en: 'Colombia \u00b7 Fintech \u00b7 1M+ users', es: 'Colombia \u00b7 Fintech \u00b7 +1M usuarios' }, url: 'https://www.midatacredito.com', logo: 'midatacredito-logo.svg', logoStyle: 'background:#fff;padding:4px;border-radius:6px;width:100px;height:auto' }]
-      }
-    },
-    {
-      title: { en: 'Full Stack Developer', es: 'Desarrollador Full Stack' },
-      company: 'Frecuencia Capital \u2014 Bogotá, Colombia',
-      companyDesc: { en: 'Digital agency specialized in e-commerce and corporate web development', es: 'Agencia digital especializada en e-commerce y desarrollo web corporativo' },
-      date: { en: 'January 2016 \u2014 January 2019 \u00b7 3 years', es: 'Enero 2016 \u2014 Enero 2019 \u00b7 3 años' },
-      bullets: [
-        { en: 'Full stack development for e-commerce platforms and corporate websites', es: 'Desarrollo full stack para plataformas de comercio electrónico y sitios web corporativos' },
-        { en: 'Solution architecture with WordPress, WooCommerce, and enterprise CMS', es: 'Arquitectura de soluciones con WordPress, WooCommerce y CMS empresariales' }
-      ],
-      clients: {
-        type: 'showcase', singleCol: true,
-        label: { en: 'Featured project', es: 'Proyecto destacado' },
-        items: [{ name: 'Ospinas & Cía S.A.', meta: { en: 'Colombia \u00b7 Construction \u00b7 94+ years', es: 'Colombia \u00b7 Construcción \u00b7 +94 años' }, url: 'https://www.ospinas.com.co', logo: 'https://www.ospinas.com.co/views/images/logo.svg', logoStyle: 'background:#fff;padding:6px;border-radius:6px' }]
-      }
-    },
-    {
-      title: { en: 'Web Administrator & Developer', es: 'Administrador & Desarrollador Web' },
-      company: 'Genius Cube Store \u2014 Bogotá, Colombia',
-      companyDesc: { en: 'E-commerce for technology products and accessories', es: 'E-commerce de productos tecnológicos y accesorios' },
-      date: { en: 'November 2013 \u2014 March 2017', es: 'Noviembre 2013 \u2014 Marzo 2017' },
-      bullets: [
-        { en: 'E-commerce store administration and development with WordPress', es: 'Administración y desarrollo de tienda e-commerce con WordPress' },
-        { en: 'Feature customization and SEO optimization', es: 'Personalización de funcionalidades y optimización SEO' }
+        { en: 'Statistical modeling and exploratory analysis for academic datasets', es: 'Modelado estadístico y análisis exploratorio en datos académicos' },
+        { en: 'Reproducible reporting and methodological documentation', es: 'Reportes reproducibles y documentación metodológica' },
+        { en: 'Collaboration with research teams on data-driven insights', es: 'Colaboración con equipos de investigación para generar hallazgos basados en datos' }
       ]
     }
   ],
 
-  projects: [
-    { name: 'Global Organized Play', role: 'Lead Architect \u2014 SaaS Platform', stack: 'Node.js \u00b7 MongoDB \u00b7 Vue.js', desc: { en: 'SaaS platform for global tournament management. Thousands of active users across the Americas.', es: 'Plataforma SaaS para gestión de torneos a nivel global. Miles de usuarios activos en las Américas.' } },
-    { name: 'Data Hub Migration',    role: 'Data Engineer \u2014 Legacy Rescue',   stack: 'Python \u00b7 Node.js \u00b7 Web Scraping', desc: { en: 'Reverse engineering and extraction of 14,000+ SKUs from legacy systems without API access.', es: 'Ingeniería inversa y extracción de +14,000 SKUs desde sistemas legacy sin acceso a API.' } },
-    { name: 'Portal B2B Industrial', role: 'Magento Architect \u2014 Enterprise',  stack: 'Magento 2 \u00b7 PHP \u00b7 CRM Integration', desc: { en: 'Bidirectional middleware for CRM synchronization and custom quotation modules.', es: 'Middleware bidireccional para sincronización CRM y módulos de cotización personalizada.' } },
-    { name: 'eSIM Market Platform',  role: 'Lead Developer \u2014 Marketplace',    stack: 'Bagisto \u00b7 Laravel \u00b7 Payment APIs', desc: { en: 'Marketplace with real-time eSIM provisioning and automated payment integration.', es: 'Marketplace con provisión de eSIM en tiempo real e integración de pagos automatizada.' } },
-    { name: 'Automation Pipelines',  role: 'n8n Specialist \u2014 Business Automation', stack: 'n8n \u00b7 APIs \u00b7 Webhooks \u00b7 AI', desc: { en: 'Complex automation workflows connecting multiple enterprise systems with AI integration.', es: 'Flujos de automatización complejos conectando múltiples sistemas empresariales con integración de IA.' } },
-    { name: 'AI-Enhanced Applications', role: 'AI Integration Lead', stack: 'AI APIs \u00b7 Node.js \u00b7 Supabase \u00b7 Vercel', desc: { en: 'Modern AI capabilities integration into production applications for augmented user experiences.', es: 'Integración de capacidades de IA moderna en aplicaciones de producción para experiencias de usuario aumentadas.' } }
-  ],
+  projects: [],
 
   education: [
-    { title: { en: 'Software Analysis & Development', es: 'Análisis & Desarrollo de Software' }, institution: 'SENA \u2014 Bogotá, Colombia', date: '2011 \u2014 2012' },
-    { title: 'Magento 2 Professional Track', institution: { en: 'M.Academy \u2014 4 Certifications', es: 'M.Academy \u2014 4 Certificaciones' }, date: '2022 \u2014 2023', details: 'Power Theming \u00b7 UI Components \u00b7 Coding Kickstart \u00b7 JS Development Fundamentals' },
-    { title: { en: '12+ Certifications in JavaScript, Frameworks & Web Development', es: '+12 Certificaciones en JavaScript, Frameworks & Desarrollo Web' }, institution: { en: 'Udemy & Online Platforms', es: 'Udemy & Plataformas Online' }, date: '2018 \u2014 2023', details: { en: 'TypeScript \u00b7 Angular \u00b7 Node.js \u00b7 Laravel \u00b7 React Native \u00b7 SQL \u00b7 Advanced JavaScript', es: 'TypeScript \u00b7 Angular \u00b7 Node.js \u00b7 Laravel \u00b7 React Native \u00b7 SQL \u00b7 JavaScript Avanzado' } },
-    { title: { en: 'High School Diploma', es: 'Bachiller Académico' }, institution: 'CANAPRO', date: '2008 \u2014 2012' }
+    { title: { en: 'PhD (in progress) — Mathematics / Data Science', es: 'Doctorado en curso — Matemáticas / Ciencia de Datos' }, institution: { en: 'University (to be confirmed)', es: 'Universidad (por confirmar)' }, date: { en: 'In progress', es: 'En curso' } },
+    { title: { en: 'Master’s Degree — Quantitative Focus', es: 'Magíster — Enfoque Cuantitativo' }, institution: { en: 'University (to be confirmed)', es: 'Universidad (por confirmar)' }, date: { en: 'Completed', es: 'Finalizado' } }
   ],
 
-  footer: { en: 'Updated \u2014 February 2026', es: 'Actualizado \u2014 Febrero 2026' }
+  interests: [
+    { en: 'Applied research in data science and mathematical modeling', es: 'Investigación aplicada en ciencia de datos y modelamiento matemático' },
+    { en: 'Teaching innovation and curriculum design', es: 'Innovación docente y diseño curricular' },
+    { en: 'Ethics, reproducibility, and open science', es: 'Ética, reproducibilidad y ciencia abierta' }
+  ],
+
+  availability: {
+    en: 'Available for university teaching, research collaboration, and data science consulting. Open to hybrid or remote work in Chile or Colombia.',
+    es: 'Disponible para docencia universitaria, colaboración en investigación y consultoría en ciencia de datos. Abierto a modalidad híbrida o remota en Chile o Colombia.'
+  },
+
+  footer: { en: 'Updated — February 2026', es: 'Actualizado — Febrero 2026' }
 };
 
 // --- Render Components ---
@@ -287,19 +164,34 @@ function renderSidebar(lang) {
     languages: { en: 'Languages', es: 'Idiomas' }
   };
 
+  function initialsFromName(name) {
+    if (!name) return '';
+    return name
+      .split(' ')
+      .filter(function(part) { return part.length > 0; })
+      .map(function(part) { return part.charAt(0).toUpperCase(); })
+      .slice(0, 3)
+      .join('');
+  }
+
+  var photoMarkup = DATA.meta.photo
+    ? '<img src="' + DATA.meta.photo + '" alt="' + DATA.meta.name + '">'
+    : initialsFromName(DATA.meta.name);
+
   return '<div class="lang-toggle">' +
     '<button class="lang-btn' + (lang === 'en' ? ' active' : '') + '" data-lang-btn="en">EN</button>' +
     '<button class="lang-btn' + (lang === 'es' ? ' active' : '') + '" data-lang-btn="es">ES</button>' +
     '</div>' +
 
     '<div class="photo-container"><div class="photo">' +
-    (DATA.meta.photo ? '<img src="' + DATA.meta.photo + '" alt="' + DATA.meta.name + '">' : 'AB') +
+    photoMarkup +
     '</div></div>' +
 
     '<div class="sidebar-section">' +
       '<div class="sidebar-title">' + icon('phone', 'icon') + ' ' + t(sectionLabels.contact, lang) + '</div>' +
       DATA.contact.map(function(c) {
-        var val = c.href ? '<a href="' + c.href + '">' + c.value + '</a>' : c.value;
+        var valText = t(c.value, lang);
+        var val = c.href ? '<a href="' + c.href + '">' + valText + '</a>' : valText;
         return '<div class="contact-item">' +
           icon(c.icon, 'icon-sm contact-icon') +
           '<div class="contact-text"><span class="contact-label">' + t(c.label, lang) + '</span>' + val + '</div>' +
@@ -307,15 +199,17 @@ function renderSidebar(lang) {
       }).join('') +
     '</div>' +
 
-    '<div class="sidebar-section">' +
-      '<div class="sidebar-title">' + icon('link', 'icon') + ' ' + t(sectionLabels.links, lang) + '</div>' +
-      DATA.links.map(function(l) {
-        return '<a href="' + l.href + '" class="link-item" target="_blank">' +
-          icon(l.icon, 'icon-sm link-icon') +
-          '<span><span class="link-label">' + l.label + '</span> \u2014 ' + l.display + '</span>' +
-        '</a>';
-      }).join('') +
-    '</div>' +
+    (DATA.links && DATA.links.length
+      ? '<div class="sidebar-section">' +
+          '<div class="sidebar-title">' + icon('link', 'icon') + ' ' + t(sectionLabels.links, lang) + '</div>' +
+          DATA.links.map(function(l) {
+            return '<a href="' + l.href + '" class="link-item" target="_blank">' +
+              icon(l.icon, 'icon-sm link-icon') +
+              '<span><span class="link-label">' + l.label + '</span> \u2014 ' + l.display + '</span>' +
+            '</a>';
+          }).join('') +
+        '</div>'
+      : '') +
 
     '<div class="sidebar-section">' +
       '<div class="sidebar-title">' + icon('code', 'icon') + ' ' + t(sectionLabels.skills, lang) + '</div>' +
@@ -338,7 +232,7 @@ function renderSidebar(lang) {
 function renderMain(lang) {
   return '<header class="cv-header">' +
       '<h1 class="cv-name">' + DATA.meta.name + '</h1>' +
-      '<p class="cv-title">' + DATA.meta.title + '</p>' +
+      '<p class="cv-title">' + t(DATA.meta.title, lang) + '</p>' +
     '</header>' +
 
     '<section class="section reveal">' +
@@ -346,13 +240,20 @@ function renderMain(lang) {
       '<p class="profile-text">' + t(DATA.profile, lang) + '</p>' +
     '</section>' +
 
+    (DATA.technicalHighlights && DATA.technicalHighlights.length
+      ? '<section class="section reveal">' +
+          '<h2 class="section-title">' + icon('code', 'icon-section') + ' ' + t({ en: 'Technical Skills', es: 'Habilidades Técnicas' }, lang) + '</h2>' +
+          '<div class="skill-tags">' + DATA.technicalHighlights.map(function(tag) { return '<span class="skill-tag">' + tag + '</span>'; }).join('') + '</div>' +
+        '</section>'
+      : '') +
+
     '<section class="section">' +
       '<h2 class="section-title">' + icon('briefcase', 'icon-section') + ' ' + t({ en: 'Professional Experience', es: 'Experiencia Profesional' }, lang) + '</h2>' +
       '<div class="experience-list">' +
         DATA.experience.map(function(exp) {
           return '<div class="experience-item' + (exp.current ? ' current' : '') + ' reveal">' +
             '<div class="exp-title">' + t(exp.title, lang) + '</div>' +
-            '<div class="exp-company">' + exp.company + '</div>' +
+            '<div class="exp-company">' + t(exp.company, lang) + '</div>' +
             '<div class="exp-company-desc">' + t(exp.companyDesc, lang) + '</div>' +
             '<div class="exp-date">' + t(exp.date, lang) + '</div>' +
             '<div class="exp-description"><ul>' +
@@ -363,19 +264,21 @@ function renderMain(lang) {
       '</div>' +
     '</section>' +
 
-    '<section class="section reveal">' +
-      '<h2 class="section-title">' + icon('layers', 'icon-section') + ' ' + t({ en: 'Featured Architectural Projects', es: 'Proyectos Arquitectónicos Destacados' }, lang) + '</h2>' +
-      '<div class="projects-grid">' +
-        DATA.projects.map(function(p) {
-          return '<div class="project-card">' +
-            '<div class="project-name">' + p.name + '</div>' +
-            '<div class="project-role">' + p.role + '</div>' +
-            '<div class="project-stack">' + p.stack + '</div>' +
-            '<div class="project-desc">' + t(p.desc, lang) + '</div>' +
-          '</div>';
-        }).join('') +
-      '</div>' +
-    '</section>' +
+    (DATA.projects && DATA.projects.length
+      ? '<section class="section reveal">' +
+          '<h2 class="section-title">' + icon('layers', 'icon-section') + ' ' + t({ en: 'Featured Projects', es: 'Proyectos Destacados' }, lang) + '</h2>' +
+          '<div class="projects-grid">' +
+            DATA.projects.map(function(p) {
+              return '<div class="project-card">' +
+                '<div class="project-name">' + p.name + '</div>' +
+                '<div class="project-role">' + p.role + '</div>' +
+                '<div class="project-stack">' + p.stack + '</div>' +
+                '<div class="project-desc">' + t(p.desc, lang) + '</div>' +
+              '</div>';
+            }).join('') +
+          '</div>' +
+        '</section>'
+      : '') +
 
     '<section class="section reveal">' +
       '<h2 class="section-title">' + icon('gradCap', 'icon-section') + ' ' + t({ en: 'Education & Professional Development', es: 'Formación & Desarrollo Profesional' }, lang) + '</h2>' +
@@ -383,18 +286,34 @@ function renderMain(lang) {
         return '<div class="education-item">' +
           '<div class="edu-title">' + t(e.title, lang) + '</div>' +
           '<div class="edu-institution">' + t(e.institution, lang) + '</div>' +
-          '<div class="edu-date">' + e.date + '</div>' +
+          '<div class="edu-date">' + t(e.date, lang) + '</div>' +
           (e.details ? '<div class="edu-details">' + t(e.details, lang) + '</div>' : '') +
         '</div>';
       }).join('') +
     '</section>' +
+
+    (DATA.interests && DATA.interests.length
+      ? '<section class="section reveal">' +
+          '<h2 class="section-title">' + icon('layers', 'icon-section') + ' ' + t({ en: 'Interests', es: 'Intereses' }, lang) + '</h2>' +
+          '<div class="exp-description"><ul>' +
+            DATA.interests.map(function(item) { return '<li>' + t(item, lang) + '</li>'; }).join('') +
+          '</ul></div>' +
+        '</section>'
+      : '') +
+
+    (DATA.availability
+      ? '<section class="section reveal">' +
+          '<h2 class="section-title">' + icon('user', 'icon-section') + ' ' + t({ en: 'Availability', es: 'Disponibilidad' }, lang) + '</h2>' +
+          '<p class="profile-text">' + t(DATA.availability, lang) + '</p>' +
+        '</section>'
+      : '') +
 
     '<div class="cv-footer">' + t(DATA.footer, lang) + '</div>';
 }
 
 // --- Engine ---
 
-var currentLang = 'en';
+var currentLang = 'es';
 
 function render(lang) {
   var cv = document.getElementById('cv');
