@@ -67,7 +67,7 @@ var DATA = {
 
   languages: [
     { name: { en: 'Spanish', es: 'Español' }, level: { en: 'Native', es: 'Nativo' } },
-    { name: { en: 'English', es: 'Inglés' },  level: { en: 'Intermediate — strong technical reading & documentation', es: 'Intermedio — sólido en lectura técnica y documentación' } }
+    { name: { en: 'English', es: 'Inglés' },  level: { en: 'Technical English', es: 'Inglés técnico' } }
   ],
 
   profile: {
