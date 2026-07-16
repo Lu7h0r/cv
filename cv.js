@@ -60,25 +60,26 @@ var DATA = {
     { icon: 'terminal', title: 'JavaScript Ecosystem', tags: ['TypeScript', 'Node.js', 'NestJS', 'React', 'Next.js', 'Angular', 'Vue.js', 'Astro', 'Express'] },
     { icon: 'cart',     title: 'E-commerce & PHP',     tags: ['Magento 2', 'Adobe Commerce', 'Bagisto', 'Laravel', 'WordPress', 'WooCommerce'] },
     { icon: 'cloud',    title: 'Cloud, Data & DevOps', tags: ['MongoDB', 'MySQL', 'Supabase', 'PostgreSQL', 'Docker', 'AWS', 'Vercel', 'Git'] },
-    { icon: 'cpu',      title: { en: 'AI & Automation', es: 'IA & Automatización' }, tags: ['n8n', 'AI APIs', 'Python', 'Web Scraping'] },
+    { icon: 'cpu',      title: { en: 'AI-Assisted Engineering', es: 'Ingeniería Asistida por IA' }, tags: ['Cursor', 'Claude Code', 'OpenAI Codex', 'MCP', 'AI Agents', 'Prompt Engineering'] },
+    { icon: 'layers',   title: { en: 'Automation & Integration', es: 'Automatización & Integración' }, tags: ['n8n', 'AI APIs', 'Python', 'Web Scraping'] },
     { icon: 'layout',   title: 'Frontend & UI',        tags: ['TailwindCSS', 'React Native', 'SASS', 'Responsive'] }
   ],
 
   languages: [
     { name: { en: 'Spanish', es: 'Español' }, level: { en: 'Native', es: 'Nativo' } },
-    { name: { en: 'English', es: 'Inglés' },  level: { en: 'Intermediate', es: 'Intermedio' } }
+    { name: { en: 'English', es: 'Inglés' },  level: { en: 'Professional working proficiency (technical)', es: 'Competencia profesional (técnico)' } }
   ],
 
   profile: {
-    en: '<strong>JavaScript-Native Solutions Architect</strong> with 10+ years of experience in web engineering. I design resilient ecosystems that bridge <strong>legacy systems with modern cloud architectures</strong>. Specialist in enterprise e-commerce platforms (Magento\u00a02 / Adobe Commerce, Bagisto), <strong>SaaS</strong> product development (Node.js/NestJS/MongoDB), and complex data migration orchestration. Pragmatic approach: clean code, scalable architectures, and continuous value delivery. <strong>Active advocate for AI as an engineering accelerator</strong> \u2014 I integrate AI tools at every stage of the development lifecycle to multiply productivity and quality.',
-    es: '<strong>Arquitecto de Soluciones JavaScript-Native</strong> con más de 10 años de experiencia en ingeniería web. Diseño ecosistemas resilientes que conectan <strong>sistemas legacy con arquitecturas cloud modernas</strong>. Especialista en plataformas e-commerce enterprise (Magento\u00a02 / Adobe Commerce, Bagisto), desarrollo de productos <strong>SaaS</strong> (Node.js/NestJS/MongoDB) y orquestación de migraciones de datos complejas. Enfoque pragmático: código limpio, arquitecturas escalables y entrega continua de valor. <strong>Impulsor activo de IA como acelerador de ingeniería</strong> \u2014 integro herramientas de inteligencia artificial en cada fase del ciclo de desarrollo para multiplicar productividad y calidad.'
+    en: '<strong>JavaScript-Native Solutions Architect</strong> with 10+ years designing and delivering web platforms at scale. Specialist in <strong>enterprise e-commerce</strong> (Magento\u00a02 / Adobe Commerce, Bagisto) and <strong>SaaS</strong> product architecture (Node.js/NestJS/MongoDB). Daily practitioner of <strong>AI-augmented engineering</strong> \u2014 agentic IDEs, coding assistants, and MCP-connected workflows across the full development lifecycle.',
+    es: '<strong>Arquitecto de Soluciones JavaScript-Native</strong> con más de 10 años diseñando y entregando plataformas web a escala. Especialista en <strong>e-commerce enterprise</strong> (Magento\u00a02 / Adobe Commerce, Bagisto) y arquitectura de productos <strong>SaaS</strong> (Node.js/NestJS/MongoDB). Practico <strong>ingeniería aumentada con IA</strong> a diario \u2014 IDEs agénticos, asistentes de código y flujos conectados vía MCP en todo el ciclo de desarrollo.'
   },
 
   experience: [
     {
       title: 'Solutions Architect & Technical Lead',
       company: 'Devir Americas \u2014 Colombia',
-      companyDesc: { en: 'International board game & entertainment publisher \u2014 Presence in 20+ countries', es: 'Editorial internacional de juegos de mesa y entretenimiento \u2014 Presencia en +20 países' },
+      companyDesc: { en: 'Primary role \u2014 International board game & entertainment publisher \u00b7 20+ countries', es: 'Rol principal \u2014 Editorial internacional de juegos de mesa y entretenimiento \u00b7 +20 países' },
       date: { en: '2024 \u2014 Present', es: '2024 \u2014 Presente' },
       current: true,
       bullets: [
@@ -98,21 +99,32 @@ var DATA = {
       }
     },
     {
-      title: 'Senior Magento 2 Architect & Integration Specialist',
+      title: { en: 'Magento Full-Stack Developer', es: 'Desarrollador Magento Full Stack' },
       company: 'Wholesale Pocket Folders \u2014 Remote',
-      companyDesc: { en: 'Independent professional \u2014 B2B manufacturer', es: 'Profesional independiente \u2014 Fabricante B2B' },
+      companyDesc: { en: 'Independent contractor \u2014 B2B manufacturer', es: 'Contrato independiente \u2014 Fabricante B2B' },
       date: { en: 'December 2024 \u2014 September 2025 \u00b7 10 months', es: 'Diciembre 2024 \u2014 Septiembre 2025 \u00b7 10 meses' },
       bullets: [
-        { en: 'Legacy stabilization and complex integrations for a B2B manufacturer', es: 'Estabilización heredada e integraciones complejas para fabricante B2B' },
+        { en: 'Legacy stabilization and complex integrations for a B2B manufacturer', es: 'Estabilización de plataformas legacy e integraciones complejas para fabricante B2B' },
         { en: 'CRM Integration: synchronized Magento 2 middleware with CRM', es: 'Integración CRM: middleware Magento 2 con CRM sincronizado' },
         { en: 'Extensions: custom modules for quotations and volume pricing', es: 'Extensiones: módulos a medida para cotizaciones y precios por volumen' },
-        { en: 'Legacy Systems: optimized PHP with 99.9% uptime', es: 'Sistemas Legacy: PHP optimizado con 99.9% uptime' }
-      ]
+        { en: 'Legacy Systems: optimized PHP with zero unplanned downtime during 10-month engagement', es: 'Sistemas Legacy: PHP optimizado sin downtime no planificado durante los 10 meses de contrato' }
+      ],
+      clients: {
+        type: 'showcase',
+        label: { en: 'B2B platform portfolio', es: 'Portafolio de plataformas B2B' },
+        items: [
+          { name: 'APD Printing',              meta: { en: 'Canada \u00b7 B2B Print', es: 'Canadá \u00b7 Impresión B2B' }, url: 'https://apdprinting.com', logo: 'logos/apdprinting.png' },
+          { name: 'Wholesale Pocket Folders', meta: { en: 'Canada \u00b7 B2B Print', es: 'Canadá \u00b7 Impresión B2B' }, url: 'https://wholesalepocketfolders.ca', logo: 'logos/wholesalepocketfolders.ico' },
+          { name: 'Canada Scorecards',        meta: { en: 'Canada \u00b7 B2B Print', es: 'Canadá \u00b7 Impresión B2B' }, url: 'https://canadascorecards.com', logo: 'logos/canadascorecards.ico' },
+          { name: 'Prestofolders USA',        meta: { en: 'USA \u00b7 B2B Print', es: 'EE.UU. \u00b7 Impresión B2B' }, url: 'https://prestofolders.com/home.html', logo: 'logos/prestofolders.png' },
+          { name: 'Presentation Folders CA',  meta: { en: 'Canada \u00b7 B2B Print', es: 'Canadá \u00b7 Impresión B2B' }, url: 'https://presentationfolders.ca', logo: 'logos/presentationfolders.png' }
+        ]
+      }
     },
     {
       title: 'Solutions Architect & Full-Stack Developer',
       company: 'uTravel \u2014 Remote',
-      companyDesc: { en: 'E-commerce platform specialized in eSIM aggregation and sales for travelers', es: 'Plataforma e-commerce especializada en agregación y venta de eSIMs para viajeros' },
+      companyDesc: { en: 'Independent project \u2014 Remote \u00b7 E-commerce platform for eSIM aggregation and sales for travelers', es: 'Proyecto independiente \u2014 Remoto \u00b7 Plataforma e-commerce de agregación y venta de eSIMs para viajeros' },
       date: { en: 'October 2025 \u2014 Present', es: 'Octubre 2025 \u2014 Presente' },
       current: true,
       bullets: [
@@ -137,17 +149,17 @@ var DATA = {
         type: 'showcase',
         label: { en: 'Enterprise client portfolio', es: 'Portafolio de clientes enterprise' },
         items: [
-          { name: 'Ricoh',       meta: 'LATAM \u00b7 B2B',       url: 'https://tienda.ricoh-americalatina.com', logo: 'https://tienda.ricoh-americalatina.com/media/wysiwyg/Subtraction_1_2.png' },
-          { name: 'Cetrogar',    meta: 'Argentina \u00b7 Retail', url: 'https://www.cetrogar.com.ar',   logo: 'https://www.cetrogar.com.ar/media/favicon/default/favicon.ico' },
-          { name: 'GILSA',       meta: { en: 'Mexico \u00b7 Construction', es: 'México \u00b7 Construcción' }, url: 'https://www.gilsa.com', logo: 'https://www.gilsa.com/static/version1770417013/frontend/Gilsa/mexico/es_MX/Magento_Theme/apple-icon-180x180.png' },
-          { name: 'Colun',       meta: { en: 'Chile \u00b7 Industry', es: 'Chile \u00b7 Industria' }, url: 'https://www.colun.cl', logo: 'https://www.colun.cl/admin/archivos/imagenes/marcas/moj6FdRfieC6U75TwPJq.png' },
-          { name: 'Tiendas EFE', meta: { en: 'Peru \u00b7 Retail', es: 'Perú \u00b7 Retail' }, url: 'https://www.efe.com.pe', logo: 'https://www.efe.com.pe/static/version1770030752/frontend/Grupoefe/default/es_PE/images/logo-efe-160.png' },
-          { name: 'La Curacao',  meta: { en: 'Peru \u00b7 Retail', es: 'Perú \u00b7 Retail' }, url: 'https://www.lacuracao.pe', logo: 'https://www.lacuracao.pe/static/version1770030752/frontend/Grupoefe/lco/es_PE/images/logo.svg' },
-          { name: 'Rosen',       meta: { en: 'Chile \u00b7 Home', es: 'Chile \u00b7 Hogar' }, url: 'https://www.rosen.cl', logo: 'https://www.rosen.cl/media/logo/stores/1/logo-rosen.webp' },
-          { name: 'Isadora',     meta: { en: 'LATAM \u00b7 Fashion', es: 'LATAM \u00b7 Moda' }, url: 'https://ar.isadoraonline.com', logo: 'https://ar-isadora.bluestargroup-cdn.com/media/favicon/stores/2/Logo-ISADORA-icono.png' },
-          { name: 'TodoModa',    meta: { en: 'LATAM \u00b7 800+ stores', es: 'LATAM \u00b7 800+ tiendas' }, url: 'https://www.todomoda.com', logo: 'https://www.todomoda.com/selector/images/todomoda.svg' },
-          { name: 'BSG Global',  meta: { en: '10+ countries \u00b7 Corp', es: '10+ países \u00b7 Corp' }, url: 'https://bsg.global', logo: 'https://bsg.global/assets/logos/logo_desktop.png' },
-          { name: 'Ceven',       meta: 'Argentina \u00b7 Tech', url: 'https://www.ceven.com', logo: 'https://qa.ceven.com/Assets/LOGO-CEVEN.png' }
+          { name: 'Ricoh',       meta: 'LATAM \u00b7 B2B',       url: 'https://tienda.ricoh-americalatina.com/co', logo: 'logos/ricoh.png' },
+          { name: 'Cetrogar',    meta: 'Argentina \u00b7 Retail', url: 'https://www.cetrogar.com.ar',   logo: 'logos/cetrogar.ico' },
+          { name: 'GILSA',       meta: { en: 'Mexico \u00b7 Construction', es: 'México \u00b7 Construcción' }, url: 'https://www.gilsa.com', logo: 'logos/gilsa.png' },
+          { name: 'Colun',       meta: { en: 'Chile \u00b7 Industry', es: 'Chile \u00b7 Industria' }, url: 'https://www.colun.cl', logo: 'logos/colun.png' },
+          { name: 'Tiendas EFE', meta: { en: 'Peru \u00b7 Retail', es: 'Perú \u00b7 Retail' }, url: 'https://www.efe.com.pe', logo: 'logos/efe.png' },
+          { name: 'La Curacao',  meta: { en: 'Peru \u00b7 Retail', es: 'Perú \u00b7 Retail' }, url: 'https://www.lacuracao.pe', logo: 'logos/lacuracao.svg' },
+          { name: 'Rosen',       meta: { en: 'Chile \u00b7 Home', es: 'Chile \u00b7 Hogar' }, url: 'https://www.rosen.cl', logo: 'logos/rosen.webp' },
+          { name: 'Isadora',     meta: { en: 'LATAM \u00b7 Fashion', es: 'LATAM \u00b7 Moda' }, url: 'https://ar.isadoraonline.com', logo: 'logos/isadora.png' },
+          { name: 'TodoModa',    meta: { en: 'LATAM \u00b7 800+ stores', es: 'LATAM \u00b7 800+ tiendas' }, url: 'https://www.todomoda.com', logo: 'logos/todomoda.svg' },
+          { name: 'BSG Global',  meta: { en: '10+ countries \u00b7 Corp', es: '10+ países \u00b7 Corp' }, url: 'https://bsg.global', logo: 'logos/bsg.png' },
+          { name: 'Ceven',       meta: 'Argentina \u00b7 Tech', url: 'https://www.ceven.com', logo: 'logos/ceven.png' }
         ]
       }
     },
@@ -164,7 +176,7 @@ var DATA = {
         type: 'showcase', singleCol: true,
         label: { en: 'Grupo EFE \u2014 Enterprise client', es: 'Grupo EFE \u2014 Cliente enterprise' },
         items: [
-          { name: 'Tiendas EFE', meta: { en: 'Peru \u00b7 Retail \u00b7 Grupo EFE', es: 'Perú \u00b7 Retail \u00b7 Grupo EFE' }, url: 'https://www.efe.com.pe', logo: 'https://www.efe.com.pe/static/version1770030752/frontend/Grupoefe/default/es_PE/images/logo-efe-160.png' }
+          { name: 'Tiendas EFE', meta: { en: 'Peru \u00b7 Retail \u00b7 Grupo EFE', es: 'Perú \u00b7 Retail \u00b7 Grupo EFE' }, url: 'https://www.efe.com.pe', logo: 'logos/efe.png' }
         ]
       }
     },
@@ -196,7 +208,7 @@ var DATA = {
       clients: {
         type: 'showcase', singleCol: true,
         label: { en: 'Project', es: 'Proyecto' },
-        items: [{ name: 'Banco Santander', meta: { en: 'Colombia \u00b7 Banking \u00b7 Fortune 500', es: 'Colombia \u00b7 Banca \u00b7 Fortune 500' }, url: 'https://www.santander.com', logo: 'https://companieslogo.com/img/orig/SAN-8a4d0f73.png?t=1720244493' }]
+        items: [{ name: 'Banco Santander', meta: { en: 'Colombia \u00b7 Banking \u00b7 Fortune 500', es: 'Colombia \u00b7 Banca \u00b7 Fortune 500' }, url: 'https://www.santander.com', logo: 'logos/santander.png' }]
       }
     },
     {
@@ -226,7 +238,7 @@ var DATA = {
       clients: {
         type: 'showcase', singleCol: true,
         label: { en: 'Featured project', es: 'Proyecto destacado' },
-        items: [{ name: 'Ospinas & Cía S.A.', meta: { en: 'Colombia \u00b7 Construction \u00b7 94+ years', es: 'Colombia \u00b7 Construcción \u00b7 +94 años' }, url: 'https://www.ospinas.com.co', logo: 'https://www.ospinas.com.co/views/images/logo.svg', logoStyle: 'background:#fff;padding:6px;border-radius:6px' }]
+        items: [{ name: 'Ospinas & Cía S.A.', meta: { en: 'Colombia \u00b7 Construction \u00b7 94+ years', es: 'Colombia \u00b7 Construcción \u00b7 +94 años' }, url: 'https://www.ospinas.com.co', logo: 'logos/ospinas.svg', logoStyle: 'background:#fff;padding:6px;border-radius:6px' }]
       }
     },
     {
@@ -242,12 +254,11 @@ var DATA = {
   ],
 
   projects: [
-    { name: 'Global Organized Play', role: 'Lead Architect \u2014 SaaS Platform', stack: 'Node.js \u00b7 MongoDB \u00b7 Vue.js', desc: { en: 'SaaS platform for global tournament management. Thousands of active users across the Americas.', es: 'Plataforma SaaS para gestión de torneos a nivel global. Miles de usuarios activos en las Américas.' } },
-    { name: 'Data Hub Migration',    role: 'Data Engineer \u2014 Legacy Rescue',   stack: 'Python \u00b7 Node.js \u00b7 Web Scraping', desc: { en: 'Reverse engineering and extraction of 14,000+ SKUs from legacy systems without API access.', es: 'Ingeniería inversa y extracción de +14,000 SKUs desde sistemas legacy sin acceso a API.' } },
-    { name: 'Portal B2B Industrial', role: 'Magento Architect \u2014 Enterprise',  stack: 'Magento 2 \u00b7 PHP \u00b7 CRM Integration', desc: { en: 'Bidirectional middleware for CRM synchronization and custom quotation modules.', es: 'Middleware bidireccional para sincronización CRM y módulos de cotización personalizada.' } },
-    { name: 'eSIM Market Platform',  role: 'Lead Developer \u2014 Marketplace',    stack: 'Bagisto \u00b7 Laravel \u00b7 Payment APIs', desc: { en: 'Marketplace with real-time eSIM provisioning and automated payment integration.', es: 'Marketplace con provisión de eSIM en tiempo real e integración de pagos automatizada.' } },
-    { name: 'Automation Pipelines',  role: 'n8n Specialist \u2014 Business Automation', stack: 'n8n \u00b7 APIs \u00b7 Webhooks \u00b7 AI', desc: { en: 'Complex automation workflows connecting multiple enterprise systems with AI integration.', es: 'Flujos de automatización complejos conectando múltiples sistemas empresariales con integración de IA.' } },
-    { name: 'AI-Enhanced Applications', role: 'AI Integration Lead', stack: 'AI APIs \u00b7 Node.js \u00b7 Supabase \u00b7 Vercel', desc: { en: 'Modern AI capabilities integration into production applications for augmented user experiences.', es: 'Integración de capacidades de IA moderna en aplicaciones de producción para experiencias de usuario aumentadas.' } }
+    { name: 'Multi-tenant SaaS Platform', role: 'Lead Architect \u2014 Platform Design', stack: 'Node.js \u00b7 MongoDB \u00b7 Vue.js', desc: { en: 'Role-based access control, multi-region operations, and scalable event workflows for distributed teams.', es: 'Control de acceso por roles, operaciones multi-regi\u00f3n y flujos de eventos escalables para equipos distribuidos.' } },
+    { name: 'B2B Commerce Middleware',    role: 'Solutions Architect \u2014 Enterprise E-commerce', stack: 'Magento 2 \u00b7 PHP \u00b7 ERP Integration', desc: { en: 'Bidirectional middleware connecting e-commerce with back-office systems; custom pricing and quotation workflows.', es: 'Middleware bidireccional entre e-commerce y sistemas back-office; reglas de pricing y flujos de cotizaci\u00f3n a medida.' } },
+    { name: 'Multi-provider Marketplace', role: 'Lead Architect \u2014 E-commerce Platform', stack: 'Laravel \u00b7 Bagisto \u00b7 Payment Gateways', desc: { en: 'Aggregator marketplace with centralized provider orchestration, dynamic pricing, and automated fulfillment.', es: 'Marketplace agregador con orquestaci\u00f3n centralizada de proveedores, pricing din\u00e1mico y fulfillment automatizado.' } },
+    { name: 'Legacy Systems Modernization', role: 'Principal Engineer \u2014 Data & Integration', stack: 'Python \u00b7 Node.js \u00b7 ETL Pipelines', desc: { en: 'Data extraction and platform stabilization for API-less legacy environments moving to modern architectures.', es: 'Extracci\u00f3n de datos y estabilizaci\u00f3n de plataformas legacy sin API en migraci\u00f3n hacia arquitecturas modernas.' } },
+    { name: 'Enterprise Automation & AI', role: 'Integration Architect \u2014 Workflow Automation', stack: 'n8n \u00b7 APIs \u00b7 Webhooks \u00b7 AI Services', desc: { en: 'Cross-system workflow automation and AI-augmented integrations across enterprise tooling and customer-facing apps.', es: 'Automatizaci\u00f3n de flujos entre sistemas e integraciones aumentadas con IA en tooling empresarial y apps de cara al usuario.' } }
   ],
 
   education: [
@@ -257,7 +268,7 @@ var DATA = {
     { title: { en: 'High School Diploma', es: 'Bachiller Académico' }, institution: 'CANAPRO', date: '2008 \u2014 2012' }
   ],
 
-  footer: { en: 'Updated \u2014 February 2026', es: 'Actualizado \u2014 Febrero 2026' }
+  footer: { en: 'Updated \u2014 July 2026', es: 'Actualizado \u2014 Julio 2026' }
 };
 
 // --- Render Components ---

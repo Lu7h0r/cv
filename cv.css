@@ -780,7 +780,12 @@ a { color: inherit; text-decoration: none; transition: color 0.2s ease; }
   .client-showcase { margin-top: 0.4rem; border-top: 1px solid #eee; padding-top: 0.3rem; }
   .client-grid { grid-template-columns: repeat(5, 1fr); gap: 0.5rem; }
   .client-card { border: 1px solid #eee; padding: 0.2rem; }
-  .client-card-logo { filter: grayscale(100%); opacity: 0.8; }
+  .client-card-logo {
+    filter: grayscale(100%);
+    opacity: 0.8;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
 
   /* Proyectos y Educación */
   .projects-grid { grid-template-columns: 1fr 1fr; gap: 1rem; }
